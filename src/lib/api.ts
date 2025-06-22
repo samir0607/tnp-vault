@@ -12,7 +12,7 @@ export async function loginUser(username: string, password: string) {
 
   if (!response.ok) throw new Error("Invalid credentials");
 
-  return await response.json(); // { accessToken, refreshToken }
+  return await response.json(); 
 }
 
 // Refresh token - POST /refresh
