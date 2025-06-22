@@ -30,7 +30,7 @@ This is a secure **Admin Dashboard** for generating and managing shareable token
 ### 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/samir0607/tnp-vault.git
+git clone https://github.com/samir0607/tnp-vault
 cd tnp-vault
 ```
 
