@@ -48,7 +48,7 @@ export default function PublicSharePage() {
 
   return (
     <main className="p-6 sm:p-10 min-h-screen bg-white text-black">
-      <h1 className="text-2xl font-bold mb-4 text-center">Shared Student Data</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">Student Data</h1>
 
       {loading && <p className="text-center">Loading...</p>}
       {error && <p className="text-red-600 text-center">{error}</p>}

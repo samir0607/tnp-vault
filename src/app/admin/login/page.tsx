@@ -35,17 +35,19 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 gap-5">
+      <a href="/" className="bg-blue-200 shadow-xl rounded-full px-3 py-1 font-bold"> Vault Home</a>
+      <img src="/dtu.png" alt="DTU Logo" className="w-40 h-auto rounded-full"/>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-sm"
+        className="p-6 rounded-lg shadow-xl w-full max-w-sm"
       >
         <h1 className="text-2xl font-bold mb-4 text-center ">Admin Login</h1>
 
         <div className="mb-4">
           <input
             {...register("username")}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 shadow-md  rounded-xl focus:outline-none"
             placeholder="Username"
           />
           {errors.username && <p className="text-red-500 text-sm">{errors.username.message}</p>}
@@ -55,7 +57,7 @@ export default function AdminLoginPage() {
           <input
             {...register("password")}
             type="password"
-            className="w-full p-2 border rounded"
+            className="w-full p-2 shadow-md  rounded-xl focus:outline-none"
             placeholder="Password"
           />
           {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
@@ -64,7 +66,7 @@ export default function AdminLoginPage() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-red-800 hover:bg-red-900 text-white font-bold py-2 px-4 rounded"
+          className="w-full bg-red-200 shadow-md text-zinc font-semibold px-6 py-2 my-6 rounded-full hover:bg-slate-300 transition disabled:opacity-50"
         >
           {isSubmitting ? "Logging in..." : "Login"}
         </button>
