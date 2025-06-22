@@ -70,6 +70,14 @@ export default function AdminPage() {
           >
             {`${typeof window !== 'undefined' ? window.location.origin : ''}/share/${shareToken}`}
           </a>
+          <button
+            onClick={() => navigator.clipboard.writeText(
+              `${typeof window !== 'undefined' ? window.location.origin : ''}/share/${shareToken}`
+            )}
+            className="text-sm text-blue-600 hover:underline"
+          >
+            📋 Copy Link
+          </button>
         </div>
       )}
 
