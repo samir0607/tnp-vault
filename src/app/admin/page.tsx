@@ -48,6 +48,16 @@ export default function AdminPage() {
       >
         {loading ? "Generating..." : "Generate Share Link"}
       </button>
+      <button
+        onClick={() => {
+          localStorage.removeItem("accessToken");
+          localStorage.removeItem("refreshToken");
+          router.push("/admin/login");
+        }}
+        className="text-sm underline text-gray-600 hover:text-red-800 transition delay-200"
+      >
+        Logout
+      </button>
 
       {shareToken && (
         <div className="text-sm text-center break-all max-w-xl text-green-700">
@@ -58,7 +68,7 @@ export default function AdminPage() {
             rel="noopener noreferrer"
             className="block underline mt-2 text-blue-700"
           >
-            {`${typeof window !== 'undefined' ? window.location.origin : ''}/share?shareToken=${shareToken}`}
+            {`${typeof window !== 'undefined' ? window.location.origin : ''}/share/${shareToken}`}
           </a>
         </div>
       )}
