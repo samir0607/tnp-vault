@@ -11,7 +11,7 @@ export default function SearchBar({ onSearch }: Props) {
         type="text"
         placeholder="Search by email..."
         onChange={(e) => onSearch(e.target.value)}
-        className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-md"
       />
     </div>
   )
